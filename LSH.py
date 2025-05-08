@@ -1,6 +1,15 @@
 import streamlit as st
 import pandas as pd
 
+st.markdown("""
+    <style>
+    #MainMenu {visibility: hidden;}
+    fotter {visibility: hidden;}
+    header {visibility: hidden;}
+    .setDepolyButton {display:None;}
+    .viewerBadge_container__1QSob {display:none;}
+    </style>
+""", unsafe_allow_html=True)
 
 # st.title("Display Excel Data with Streamlit")
 #
