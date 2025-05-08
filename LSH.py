@@ -4,6 +4,7 @@ import pandas as pd
 st.markdown("""
     <style>
     #MainMenu {visibility: hidden;}
+    [data-testid="stToolbar] {visibility: hidden !important;}
     fotter {visibility: hidden;}
     header {visibility: hidden;}
     .setDepolyButton {display:None;}
