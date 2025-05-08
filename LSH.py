@@ -21,7 +21,10 @@ def main():
 
         # Interactive filtering
         st.write("### Filter Data")
-        column = st.selectbox("Select column to filter", data.columns)
+        # Each column selected
+        # column = st.selectbox("Select column to filter", data.columns)
+        # Specific column selected, "Invoice" in this case
+        column = st.selectbox("Select column to filter", data.columns[6])
         unique_values = data[column].unique()
         selected_value = st.selectbox("Select value", unique_values)
         filtered_data = data[data[column] == selected_value]
