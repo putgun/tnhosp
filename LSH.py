@@ -5,7 +5,7 @@ st.markdown("""
     <style>
     #MainMenu {visibility: hidden;}
     [data-testid="stToolbar"] {visibility: hidden !important;}
-    footer {visibility: hidden !important;}
+    footer {display: none !important;}
     header {visibility: hidden;}
     .viewerBadge_container__1QSob,
     .viewerBadge_link__1S137,
