@@ -7,10 +7,9 @@ st.markdown("""
     [data-testid="stToolbar"] {visibility: hidden !important;}
     fotter {visibility: hidden;}
     header {visibility: hidden;}
-    ._profileContainer_gzau3_53 {display: none;}
-    ._container_gzau3_1 _viewerBadge_nim44_23 {display: none;}
-    ._container_gzau3_1 _viewerBadge_nim44_23 {display: none;}
-    .css-m70y {display: none;}
+    .viewerBadge_container__1QSob,
+    .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {display: none !important;
     </style>
 """, unsafe_allow_html=True)
 
