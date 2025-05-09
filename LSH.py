@@ -7,8 +7,6 @@ st.markdown("""
     [data-testid="stToolbar"] {visibility: hidden !important;}
     fotter {visibility: hidden;}
     header {visibility: hidden;}
-    .setDepolyButton {display:None;}
-    .viewerBadge_container__1QSob {display:none;}
     </style>
 """, unsafe_allow_html=True)
 
