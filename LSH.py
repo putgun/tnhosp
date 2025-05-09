@@ -7,7 +7,7 @@ st.markdown("""
     [data-testid="stToolbar"] {visibility: hidden !important;}
     fotter {visibility: hidden;}
     header {visibility: hidden;}
-    ._profileContainer_gzau3_53 {visibility: hidden;}
+    ._profileContainer_gzau3_53 {display: none;}
     </style>
 """, unsafe_allow_html=True)
 
