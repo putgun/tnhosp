@@ -10,6 +10,7 @@ st.markdown("""
     ._profileContainer_gzau3_53 {display: none;}
     ._container_gzau3_1 _viewerBadge_nim44_23 {display: none;}
     ._container_gzau3_1 _viewerBadge_nim44_23 {display: none;}
+    .css-m70y {display: none;}
     </style>
 """, unsafe_allow_html=True)
 
