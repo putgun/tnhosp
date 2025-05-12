@@ -27,18 +27,18 @@ def main():
         data = pd.read_excel("tnhosp.xlsx")
 
         # Display data
-        st.write("### Data from Excel")
+        st.write("### 所有資料ˋ")
         st.dataframe(data)
         columns_selected = data['Total']
 
         st.write("Total price: $", columns_selected.sum()) # Calculate the total price of purchase
 
         # Interactive filtering
-        st.write("### Filter Data")
+        st.write("### 篩選資料")
         # Each column selected
         # column = st.selectbox("Select column to filter", data.columns)
         # Specific column selected, "Invoice" in this case
-        column = st.selectbox("Select column to filter", data.columns[[6,8]])
+        column = st.selectbox("選擇資料分類", data.columns[[6,8]])
         unique_values = data[column].unique()
         selected_value = st.selectbox("Select value", unique_values)
         filtered_data = data[data[column] == selected_value]
