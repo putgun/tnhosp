@@ -40,7 +40,7 @@ def main():
         # Specific column selected, "Invoice" in this case
         column = st.selectbox("選擇資料分類", data.columns[[6,8]])
         unique_values = data[column].unique()
-        selected_value = st.selectbox("Select value", unique_values)
+        selected_value = st.selectbox("選擇分類細項", unique_values)
         filtered_data = data[data[column] == selected_value]
         st.dataframe(filtered_data)
         st.write('Total price: ', filtered_data['Total'].sum())
