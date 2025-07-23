@@ -38,7 +38,7 @@ def main():
         # Each column selected
         # column = st.selectbox("Select column to filter", data.columns)
         # Specific column selected, "Invoice" in this case
-        column = st.selectbox("選擇資料分類", data.columns[[6,7,8]])
+        column = st.selectbox("選擇資料分類", data.columns[[5,6,8]])
         unique_values = data[column].unique()
         selected_value = st.selectbox("選擇分類細項", unique_values)
         filtered_data = data[data[column] == selected_value]
