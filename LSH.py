@@ -20,6 +20,18 @@ st.markdown("""
 #     df = pd.read_excel(upload_file)
 #     st.dataframe(df)
 
+@st.dialog(title="Hello!!!", width="small")
+def show_info_dialog():
+
+    data = pd.read_excel("tnhosp.xlsx")
+    columns_selected = data['Total']
+    totalCost = columns_selected.sum()
+    print(totalCost)
+    others = 43000
+    totalBalance = 430000 - totalCost - others
+
+    st.write("目前餘額: $", totalBalance)  # Calculate the total price of purchase
+
 def main():
     st.title("台南醫院報帳請款")
 
@@ -50,8 +62,12 @@ def main():
     except Exception as e:
         st.error(f"Error: {e}")
 
+show_info_dialog()
+main()
+
 if __name__ == "__main__":
-    main()
+    pass
+    # main()
 
 
 
