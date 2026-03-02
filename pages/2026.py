@@ -23,12 +23,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# st.title("台南醫院報帳請款紀錄_2026")
-#
-# upload_file = st.file_uploader("Choose an Excel file", type=['xlsx'])
-# if upload_file is not None:
-#     df = pd.read_excel(upload_file)
-#     st.dataframe(df)
 
 @st.dialog(title="Hello!!!", width="small")
 def show_info_dialog():
@@ -42,7 +36,7 @@ def show_info_dialog():
     st.write("目前餘額: $", totalBalance)  # Calculate the total price of purchase
 
 def main():
-    st.title("台南醫院報帳請款")
+    st.title("台南醫院報帳請款紀錄_2026")
 
     try:
         data = pd.read_excel("tnhosp.xlsx", sheet_name="2026")
