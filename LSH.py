@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 st.markdown("""
     <style>
@@ -13,61 +12,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# st.title("台南醫院報帳請款")
-#
-# upload_file = st.file_uploader("Choose an Excel file", type=['xlsx'])
-# if upload_file is not None:
-#     df = pd.read_excel(upload_file)
-#     st.dataframe(df)
+st.set_page_config(page_title="Lab Assistant", layout="wide")
 
-@st.dialog(title="Hello!!!", width="small")
-def show_info_dialog():
+st.title("台南醫院計畫")
+st.write("Welcome to the automated calculation tool.")
 
-    data = pd.read_excel("tnhosp.xlsx")
-    columns_selected = data['Total']
-    totalCost = columns_selected.sum()
-    print(totalCost)
-    others = 43000
-    totalBalance = 430000 - totalCost - others
-
-    st.write("目前餘額: $", totalBalance)  # Calculate the total price of purchase
-
-def main():
-    st.title("台南醫院報帳請款")
-
-    try:
-        data = pd.read_excel("tnhosp.xlsx")
-
-        # Display data
-        st.write("### 所有資料ˋ")
-        st.dataframe(data)
-        columns_selected = data['Total']
-
-        st.write("Total price: $", columns_selected.sum()) # Calculate the total price of purchase
-
-        # Interactive filtering
-        st.write("### 篩選資料")
-        # Each column selected
-        # column = st.selectbox("Select column to filter", data.columns)
-        # Specific column selected, "Invoice" in this case
-        column = st.selectbox("選擇資料分類", data.columns[[5,6,8]])
-        unique_values = data[column].unique()
-        selected_value = st.selectbox("選擇分類細項", unique_values)
-        filtered_data = data[data[column] == selected_value]
-        st.dataframe(filtered_data)
-        st.write('Total price: ', filtered_data['Total'].sum())
-
-    except FileNotFoundError:
-        st.error("Excel file not found. Please ensure data is in the same directory")
-    except Exception as e:
-        st.error(f"Error: {e}")
-
-show_info_dialog()
-main()
-
-if __name__ == "__main__":
-    pass
-    # main()
+st.info("👈 選擇計畫年度 ")
 
 
 
