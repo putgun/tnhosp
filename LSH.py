@@ -2,6 +2,16 @@ import streamlit as st
 
 st.markdown("""
     <style>
+    /* This targets the text labels in the sidebar navigation */
+        [data-testid="stSidebarNav"] span {
+            font-size: 20px !important;
+            font-weight: bold;
+        }
+        
+        /* This targets any other text inside the sidebar */
+        [data-testid="stSidebar"] {
+            font-size: 18px;
+        }
     #MainMenu {visibility: hidden;}
     [data-testid="stToolbar"] {visibility: hidden !important;}
     footer {display: none !important;}
